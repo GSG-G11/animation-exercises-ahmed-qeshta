@@ -1,0 +1,231 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  width: 70%;
+  height: 2px;
+  margin: 10px auto;
+  background-color: gray;
+  border: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  min-height: 50vh;
+}
+
+/*------------------- task one ------------------------------ */
+.btn-task-1 {
+  width: 370px;
+  height: auto;
+  background-color: #ffffff;
+  border: 3px solid #3688e7;
+  color: #3688e7;
+  font-size: 40px;
+  border-radius: 10px;
+  padding: 10px 5px;
+  transition: 0.5s ease-out;
+}
+
+.btn-task-1:hover {
+  box-shadow: 1px 1px 8px 8px rgba(84, 109, 131, 0.24);
+  width: 435px;
+  background-color: #3688e7;
+  color: #ffffff;
+}
+
+/*------------------- task two ------------------------------ */
+.btn-task-2 {
+  width: 120px;
+  height: 120px;
+  background-color: #3581c9;
+  border: 3px solid #3581c9;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px 4px rgba(84, 109, 131, 0.4);
+  transition: all 0.5s ease-out;
+}
+
+.btn-task-2:hover {
+  border-radius: 0;
+  transform: translateY(50px) rotate(35deg) scale(1.5);
+}
+
+/*------------------- task three ------------------------------ */
+.box-container {
+  background-color: #3581c9;
+  height: 180px;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  margin: 0 15px;
+  background-color: #e1974e;
+  animation: boxAnimation calc(0.6s * var(--i)) ease-in-out;
+}
+
+
+@keyframes boxAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw) scale(0);
+  }
+}
+
+/*------------------- task four ------------------------------ */
+.div-image {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.image img {
+  width: 300px;
+  max-height: 400px;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(320px, 100px) scale(0.5);
+  animation: goToLeft 0.8s ease-in-out forwards 0.3s,
+  goToCenter 0.9s ease-in-out forwards 0.8s,
+  beRounded 1s ease-in-out forwards 1.2s;
+}
+
+.div-image .btn-position {
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.play, .pause {
+  margin: 5px 10px;
+  padding: 10px 15px;
+  border: 1px solid #3581c9;
+  color: #fff;
+  background-color: #3581c9;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 4px rgba(57, 94, 128, 0.48);
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+
+.play:hover, .pause:hover {
+  background-color: #396591;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes goToLeft {
+  100% {
+    transform: translate(-250px, -70px) scale(1);
+  }
+}
+
+@keyframes goToCenter {
+  100% {
+    transform: translate(0, 0) scale(0.8);
+  }
+}
+
+@keyframes beRounded {
+  100% {
+    width: 300px;
+    height: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+
+/* ------------------ More Animations Examples ---------------------- */
+
+.btn-1 {
+  width: 120px;
+  height: 120px;
+  background-color: #3581c9;
+  border: 3px solid #3581c9;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: all 0.5s ease-out;
+}
+
+.btn-1:hover {
+  background-color: white;
+  color: #3581c9;
+  border-radius: 0;
+  box-shadow: 1px 1px 8px 8px rgba(84, 109, 131, 0.24);
+  transform: rotate(45deg) scale(1.5);
+  /*transform:translateY(50px)  rotate(35deg) scale(1.5);*/
+}
+
+.btn-1 p {
+  transition: all 0.5s ease-out;
+}
+
+.btn-1:hover p {
+  color: #3581c9;
+  transform: rotate(calc(-405deg)) scale(1); /*  -45deg - 360deg */
+}
+
+
+/* -------------------- other code -----------------*/
+.btn-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #3581c9;
+  border: 3px solid #3581c9;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 50%;
+  transition: all 0.5s ease-out;
+  animation: scaling 2.2s ease-in-out infinite;
+}
+
+@keyframes scaling {
+  from {
+    /*transform: scale(1);*/
+    background-color: #3581c9;
+    border: 3px solid #3581c9;
+  }
+  50% {
+    transform: scale(2.5);
+    background-color: #c22561;
+    border: 3px solid #c22561;
+    box-shadow: 1px 1px 8px 8px rgba(194, 37, 97, 0.42);
+  }
+
+  to {
+    background-color: #3581c9;
+    border: 3px solid #3581c9;
+  }
+}

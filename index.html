@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Animations Examples</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<h2>Task Animations </h2>
+<!-- * ***  Task 1 *** *  -->
+<hr/>
+<h3>Task 1</h3>
+<div class="div div-image">
+    <div class="image">
+        <img alt="image Task" src="./images/joker.jpg">
+    </div>
+
+    <div class="btn-position">
+        <button class="play hidden" id="play-box-1" onclick="isPlayBox1()">play</button>
+        <button class="pause" id="pause-box-1" onclick="isPauseBox1()">pause</button>
+    </div>
+</div>
+
+<hr/>
+<h3>Task 2</h3>
+<div class="div">
+    <div class="box-container">
+        <div class="box" style="--i:1;"></div>
+        <div class="box" style="--i:2;"></div>
+        <div class="box" style="--i:3;"></div>
+    </div>
+</div>
+
+
+<!-- Hi Button  -->
+<hr/>
+<h3>Task 3</h3>
+<div class="div">
+    <button class="btn-task-1">
+        Hover Me
+    </button>
+</div>
+
+<hr/>
+<h3>Task 4</h3>
+<div class="div">
+    <button class="btn-task-2">
+        Hover Me
+    </button>
+</div>
+
+
+<!-- More Animations Examples  -->
+<hr/>
+<h2>More Animations Examples </h2>
+
+<!-- Hover Me Button  -->
+<hr/>
+<h3>Hover Me Button</h3>
+<div class="div">
+    <button class="btn-1">
+        <p>Hover Me</p>
+    </button>
+</div>
+
+<!-- Hi Button  -->
+<hr/>
+<h3>Hi Button</h3>
+<div class="div div-image">
+    <p class="btn-2">
+        Hi
+    </p>
+    <div class="btn-position">
+        <button class="play hidden" id="play-box-2" onclick="isPlayBox2()">play</button>
+        <button class="pause" id="pause-box-2" onclick="isPauseBox2()">pause</button>
+    </div>
+</div>
+
+
+<!-- -->
+<script>
+  const box1 = document.querySelector('.image img');
+  const box2 = document.querySelector('.btn-2');
+  const playBox1 = document.getElementById('play-box-1');
+  const pauseBox1 = document.getElementById('pause-box-1');
+  const playBox2 = document.getElementById('play-box-2');
+  const pauseBox2 = document.getElementById('pause-box-2');
+
+  function isPlayBox1() {
+    box1.style.animationPlayState = 'running';
+    pauseBox1.classList.toggle('hidden');
+    playBox1.classList.toggle('hidden');
+  }
+
+  function isPauseBox1() {
+    box1.style.animationPlayState = 'paused'
+    pauseBox1.classList.toggle('hidden');
+    playBox1.classList.toggle('hidden');
+  }
+
+  function isPlayBox2() {
+    box2.style.animationPlayState = 'running';
+    pauseBox2.classList.toggle('hidden');
+    playBox2.classList.toggle('hidden');
+  }
+
+  function isPauseBox2() {
+    box2.style.animationPlayState = 'paused'
+    pauseBox2.classList.toggle('hidden');
+    playBox2.classList.toggle('hidden');
+  }
+</script>
+
+
+</body>
+</html>
